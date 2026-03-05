@@ -103,7 +103,7 @@ app.all('/auth', (req, res) => {
     console.log(`[세션 제한 초과] ⚠️ ${time} | ${email} | device:${deviceKey} | size:${entry.profiles.size}`);
     return res.json({
       ok: false,
-      msg: `동시 로그인은 각 프로그램 별 최대 ${MAX_SESSIONS_PER_DEVICE}개까지 가능합니다.`,
+      msg: `해당 아이디는 접속기,보안패스,도우미 ${MAX_SESSIONS_PER_DEVICE}개까지 가능합니다.`,
     });
   }
 
