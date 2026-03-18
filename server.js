@@ -12,7 +12,7 @@ app.use(express.json());
 // app.set('trust proxy', true);
 
 const SESSION_TTL_MS = 120 * 60 * 1000; // 2시간
-const MAX_SESSIONS_PER_DEVICE = 3;
+const MAX_SESSIONS_PER_DEVICE = 4;
 
 // email -> { deviceKey, profiles: Map(profileId -> { sessionId, ip, ua, last }), lastDeviceSeenAt }
 const activeSessions = new Map();
